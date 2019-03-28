@@ -15,32 +15,7 @@ public class SyslogToConsolePrinter {
   public static void main(String[] args) {
     ClassLoader classloader = Thread.currentThread().getContextClassLoader();
     List<String> inputs = new ArrayList<>();
-    //    inputs.add("classpath.log");
-    //    inputs.add("dwdc-2019-03-22-01-00.log");
-    //    inputs.add("dwdl-2019-03-22-01-00.log");
-    //    inputs.add("dwdl-2019-03-22-01-05.log");
-    //    inputs.add("dwdl-2019-03-22-01-10.log");
-    //    inputs.add("hive.syslog.log");
-    //    inputs.add("hs2-2019-03-22-01-00.log");
-    //    inputs.add("hs2-2019-03-22-01-05-2.log");
-    //    inputs.add("hs2-2019-03-22-01-05.log");
-    //    inputs.add("hs2-2019-03-22-01-10.log");
-    //    inputs.add("hs2-syslog-k8s.log");
-    //    inputs.add("llap-syslog-cr.log");
-    //    inputs.add("llap-syslog-k8s.log");
-    //    inputs.add("m-2019-03-22-01-00.log");
-    //    inputs.add("m-2019-03-22-01-05.log");
-    //    inputs.add("m-2019-03-22-01-10.log");
-    //    inputs.add("mc-2019-03-22-01-00.log");
-    //    inputs.add("mix.log");
-    //    inputs.add("qc-2019-03-22-01-00.log");
-    //    inputs.add("qe-2019-03-22-01-00.log");
-    //    inputs.add("qe-2019-03-22-01-05.log");
-    //    inputs.add("syslog-hs2-cr.log");
-    //    inputs.add("syslog-hs2-cr2.log");
-    //    inputs.add("syslog-llap-2.log");
-    //    inputs.add("syslog-llap.log");
-    inputs.add("hs2-linebreak-after-structured-data-4.log");
+    inputs.add("test.log");
     for (String file : inputs) {
       InputStream is = classloader.getResourceAsStream(file);
       SyslogParser syslogParser = new SyslogParser();
@@ -58,7 +33,6 @@ public class SyslogToConsolePrinter {
                   break;
                 }
                 events++;
-                // System.out.println(row);
                 if (row.get(3) != null) {
                   System.out.print(row.get(3) + " ");
                   Map<String, String> data = (Map<String, String>) row.get(8);
