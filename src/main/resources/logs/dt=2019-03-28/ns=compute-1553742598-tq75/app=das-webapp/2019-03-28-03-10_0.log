@@ -1,0 +1,337 @@
+nc: hiveserver2-service (10.100.245.122:10010): Connection timed out
+waiting for hiveserver2-service to connect on 10010..
+nc: hiveserver2-service (10.100.245.122:10010): Connection timed out
+waiting for hiveserver2-service to connect on 10010..
+nc: hiveserver2-service (10.100.245.122:10010): Connection timed out
+waiting for hiveserver2-service to connect on 10010..
+nc: hiveserver2-service (10.100.245.122:10010): Connection timed out
+waiting for hiveserver2-service to connect on 10010..
+nc: hiveserver2-service (10.100.245.122:10010): Connection timed out
+waiting for hiveserver2-service to connect on 10010..
+nc: hiveserver2-service (10.100.245.122:10010): Connection timed out
+waiting for hiveserver2-service to connect on 10010..
+nc: hiveserver2-service (10.100.245.122:10010): Connection timed out
+waiting for hiveserver2-service to connect on 10010..
+nc: hiveserver2-service (10.100.245.122:10010): Connection timed out
+waiting for hiveserver2-service to connect on 10010..
+nc: hiveserver2-service (10.100.245.122:10010): Connection timed out
+waiting for hiveserver2-service to connect on 10010..
+nc: hiveserver2-service (10.100.245.122:10010): Connection timed out
+waiting for hiveserver2-service to connect on 10010..
+nc: hiveserver2-service (10.100.245.122:10010): Connection timed out
+waiting for hiveserver2-service to connect on 10010..
+nc: hiveserver2-service (10.100.245.122:10010): Connection timed out
+waiting for hiveserver2-service to connect on 10010..
+nc: hiveserver2-service (10.100.245.122:10010): Connection timed out
+waiting for hiveserver2-service to connect on 10010..
+nc: hiveserver2-service (10.100.245.122:10010): Connection timed out
+waiting for hiveserver2-service to connect on 10010..
+nc: hiveserver2-service (10.100.245.122:10010): Connection timed out
+waiting for hiveserver2-service to connect on 10010..
+nc: hiveserver2-service (10.100.245.122:10010): Connection timed out
+waiting for hiveserver2-service to connect on 10010..
+nc: hiveserver2-service (10.100.245.122:10010): Connection timed out
+waiting for hiveserver2-service to connect on 10010..
+nc: hiveserver2-service (10.100.245.122:10010): Connection timed out
+waiting for hiveserver2-service to connect on 10010..
+nc: hiveserver2-service (10.100.245.122:10010): Connection timed out
+waiting for hiveserver2-service to connect on 10010..
+nc: hiveserver2-service (10.100.245.122:10010): Connection timed out
+waiting for hiveserver2-service to connect on 10010..
+nc: hiveserver2-service (10.100.245.122:10010): Connection timed out
+waiting for hiveserver2-service to connect on 10010..
+nc: hiveserver2-service (10.100.245.122:10010): Connection timed out
+waiting for hiveserver2-service to connect on 10010..
+nc: hiveserver2-service (10.100.245.122:10010): Connection timed out
+waiting for hiveserver2-service to connect on 10010..
+nc: hiveserver2-service (10.100.245.122:10010): Connection timed out
+waiting for hiveserver2-service to connect on 10010..
+nc: hiveserver2-service (10.100.245.122:10010): Connection timed out
+waiting for hiveserver2-service to connect on 10010..
+nc: hiveserver2-service (10.100.245.122:10010): Connection timed out
+waiting for hiveserver2-service to connect on 10010..
+nc: hiveserver2-service (10.100.245.122:10010): Connection timed out
+waiting for hiveserver2-service to connect on 10010..
+nc: hiveserver2-service (10.100.245.122:10010): Connection timed out
+waiting for hiveserver2-service to connect on 10010..
+nc: hiveserver2-service (10.100.245.122:10010): Connection timed out
+waiting for hiveserver2-service to connect on 10010..
+nc: hiveserver2-service (10.100.245.122:10010): Connection timed out
+waiting for hiveserver2-service to connect on 10010..
+nc: hiveserver2-service (10.100.245.122:10010): Connection timed out
+waiting for hiveserver2-service to connect on 10010..
+hiveserver2-service (10.100.245.122:10010) open
++ JAVA=/docker-java-home/bin/java
++ export JVM_PID=1
++ JVM_PID=1
++ '[' webapp = webapp ']'
++ BINARY=/usr/das/current/bin/das-webapp
++ /usr/das/current/bin/das-webapp db-migrate
++ find_das_home
++ DAS_HOME=/usr/das/current
+++ ls /usr/das/
+++ grep -v current
+++ tail -1
++ for x in $DAS_HOME /usr/das/current/data_analytics_studio /usr/das/$(ls /usr/das/ 2>/dev/null| grep -v current | tail -1)/data_analytics_studio
++ test -d /usr/das/current
++ test -d /usr/das/current/bin
++ test -x /usr/das/current/bin/das-webapp
+++ cd /usr/das/current
+++ pwd
++ DAS_HOME=/usr/das/current
++ return
++ DAS_NAME=das-webapp
++ DAS_CONF_FILENAME=das-webapp.json
++ DAS_CONF_DIR=/usr/das/current/conf/das-webapp
++ DAS_LIB_DIR=/usr/das/current/lib
++ DAS_CONF_FILE_LOC=/usr/das/current/conf/das-webapp/das-webapp.json
++ DAS_CONF_TEMPLATE_FILE_LOC=/usr/das/current/conf/das-webapp/template/das-webapp.json.hbs
++ DAS_ARTIFACT_VERSION_FILE_LOC=/usr/das/current/conf/das-webapp/env-version.sh
++ DAS_PID_DIR=/var/run/das-webapp
++ DAS_PID_FILE_LOC=/var/run/das-webapp/das-webapp.pid
++ DAS_LOG_DIR=/var/log/das
++ DAS_OUTPUT_FILE_LOCATION=/var/log/das/das-webapp.out
++ OUTPUT_LOG=true
++ FOREGROUND=true
++ source /usr/das/current/conf/das-webapp/env-version.sh
+++ DAS_VERSION=1.3.0.1.3.0.0-16
+++ DAS_TIMESTAMP='2019-02-12 17:23'
++ DAS_JAR_FILE_LOC=/usr/das/current/lib/data_analytics_studio-webapp-1.3.0.1.3.0.0-16.jar
++ DAS_MAIN_CLASS=com.hortonworks.hivestudio.webapp.HiveStudioApplication
++ CLASSPATH='/usr/das/current/lib/data_analytics_studio-webapp-1.3.0.1.3.0.0-16.jar:/usr/das/current/lib/hs_libs/*:/usr/das/current/conf/hadoop'
++ RETURN_VAL=0
++ case "${1:-}" in
++ '[' -z x ']'
++ JAVA=/docker-java-home/bin/java
++ '[' -z x ']'
++ START_DEBUG=
++ '[' '' = true ']'
++ JDWP=
++ [[ -z '' ]]
++ echo 'No additional classpath set.'
+No additional classpath set.
++ case "${1:-}" in
++ migrate_db
++ echo -e 'Migrating database for Hive Studio Server'
++ exitIfNotSetup
+Migrating database for Hive Studio Server
++ '[' -f /usr/das/current/conf/das-webapp/das-webapp.json ']'
++ /docker-java-home/bin/java -Djdk.tls.disabledAlgorithms=SSLv3,GCM -Xms4096M -Xmx6553M -Xloggc:/var/log/das/das-webapp-gc-%t.log -XX:+UseG1GC -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+PrintGCCause -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=10 -XX:GCLogFileSize=10M -classpath '/usr/das/current/lib/data_analytics_studio-webapp-1.3.0.1.3.0.0-16.jar:/usr/das/current/lib/hs_libs/*:/usr/das/current/conf/hadoop' com.hortonworks.hivestudio.webapp.HiveStudioApplication db migrate /usr/das/current/conf/das-webapp/das-webapp.json
+WARN  [2019-03-28 03:13:51,395] org.flywaydb.core.Flyway: sqlMigrationSuffix has been deprecated and will be removed in Flyway 6.0.0. Use sqlMigrationSuffixes instead.
+INFO  [2019-03-28 03:13:51,398] org.flywaydb.core.internal.util.VersionPrinter: Flyway Community Edition 5.0.7 by Boxfuse
+INFO  [2019-03-28 03:13:51,595] org.flywaydb.core.internal.database.DatabaseFactory: Database: jdbc:postgresql://postgres-service:5432/compute-1553742598-tq75-das (PostgreSQL 9.6)
+INFO  [2019-03-28 03:13:51,908] org.flywaydb.core.internal.command.DbSchemas: Creating schema "das" ...
+INFO  [2019-03-28 03:13:51,911] org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory: Creating Schema History table: "das"."schema_version"
+INFO  [2019-03-28 03:13:52,030] org.flywaydb.core.internal.command.DbMigrate: Current version of schema "das": null
+INFO  [2019-03-28 03:13:52,062] org.flywaydb.core.internal.command.DbMigrate: Migrating schema "das" to version 1 - create tables
+WARN  [2019-03-28 03:13:52,066] org.flywaydb.core.internal.database.ExecutableSqlScript: DB: schema "das" already exists, skipping (SQL State: 42P06 - Error Code: 0)
+INFO  [2019-03-28 03:13:52,666] org.flywaydb.core.internal.command.DbMigrate: Migrating schema "das" to version 2 - DAS 1 1
+INFO  [2019-03-28 03:13:52,681] org.flywaydb.core.internal.command.DbMigrate: Migrating schema "das" to version 3 - DAS 1 3
+INFO  [2019-03-28 03:13:52,697] org.flywaydb.core.internal.command.DbMigrate: Successfully applied 3 migrations to schema "das" (execution time 00:00.678s)
++ exit 0
++ '[' webapp = event-processor ']'
++ . /fluentd-utils.sh
+++ set -x
+++ FLUENTD_CONF=/var/tmp/fluentd.conf
+++ FLUENTD_PIDFILE=/var/tmp/fluentd.pid
++ start_fluentd
++ '[' '' '!=' yarn ']'
++ return
++ exec /usr/das/current/bin/das-webapp start
++ find_das_home
++ DAS_HOME=/usr/das/current
+++ ls /usr/das/
+++ grep -v current
+++ tail -1
++ for x in $DAS_HOME /usr/das/current/data_analytics_studio /usr/das/$(ls /usr/das/ 2>/dev/null| grep -v current | tail -1)/data_analytics_studio
++ test -d /usr/das/current
++ test -d /usr/das/current/bin
++ test -x /usr/das/current/bin/das-webapp
+++ cd /usr/das/current
+++ pwd
++ DAS_HOME=/usr/das/current
++ return
++ DAS_NAME=das-webapp
++ DAS_CONF_FILENAME=das-webapp.json
++ DAS_CONF_DIR=/usr/das/current/conf/das-webapp
++ DAS_LIB_DIR=/usr/das/current/lib
++ DAS_CONF_FILE_LOC=/usr/das/current/conf/das-webapp/das-webapp.json
++ DAS_CONF_TEMPLATE_FILE_LOC=/usr/das/current/conf/das-webapp/template/das-webapp.json.hbs
++ DAS_ARTIFACT_VERSION_FILE_LOC=/usr/das/current/conf/das-webapp/env-version.sh
++ DAS_PID_DIR=/var/run/das-webapp
++ DAS_PID_FILE_LOC=/var/run/das-webapp/das-webapp.pid
++ DAS_LOG_DIR=/var/log/das
++ DAS_OUTPUT_FILE_LOCATION=/var/log/das/das-webapp.out
++ OUTPUT_LOG=true
++ FOREGROUND=true
++ source /usr/das/current/conf/das-webapp/env-version.sh
+++ DAS_VERSION=1.3.0.1.3.0.0-16
+++ DAS_TIMESTAMP='2019-02-12 17:23'
++ DAS_JAR_FILE_LOC=/usr/das/current/lib/data_analytics_studio-webapp-1.3.0.1.3.0.0-16.jar
++ DAS_MAIN_CLASS=com.hortonworks.hivestudio.webapp.HiveStudioApplication
++ CLASSPATH='/usr/das/current/lib/data_analytics_studio-webapp-1.3.0.1.3.0.0-16.jar:/usr/das/current/lib/hs_libs/*:/usr/das/current/conf/hadoop'
++ RETURN_VAL=0
++ case "${1:-}" in
++ '[' -z x ']'
++ JAVA=/docker-java-home/bin/java
++ '[' -z x ']'
++ START_DEBUG=
++ '[' '' = true ']'
++ JDWP=
++ [[ -z '' ]]
++ echo 'No additional classpath set.'
+No additional classpath set.
++ case "${1:-}" in
++ start_server
++ echo -e 'Starting Hive Studio Server'
++ '[' true = false ']'
++ exitIfNotSetup
+Starting Hive Studio Server
++ '[' -f /usr/das/current/conf/das-webapp/das-webapp.json ']'
++ migrate_db
++ echo -e 'Migrating database for Hive Studio Server'
++ exitIfNotSetup
+Migrating database for Hive Studio Server
++ '[' -f /usr/das/current/conf/das-webapp/das-webapp.json ']'
++ /docker-java-home/bin/java -Djdk.tls.disabledAlgorithms=SSLv3,GCM -Xms4096M -Xmx6553M -Xloggc:/var/log/das/das-webapp-gc-%t.log -XX:+UseG1GC -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+PrintGCCause -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=10 -XX:GCLogFileSize=10M -classpath '/usr/das/current/lib/data_analytics_studio-webapp-1.3.0.1.3.0.0-16.jar:/usr/das/current/lib/hs_libs/*:/usr/das/current/conf/hadoop' com.hortonworks.hivestudio.webapp.HiveStudioApplication db migrate /usr/das/current/conf/das-webapp/das-webapp.json
+WARN  [2019-03-28 03:13:54,218] org.flywaydb.core.Flyway: sqlMigrationSuffix has been deprecated and will be removed in Flyway 6.0.0. Use sqlMigrationSuffixes instead.
+INFO  [2019-03-28 03:13:54,221] org.flywaydb.core.internal.util.VersionPrinter: Flyway Community Edition 5.0.7 by Boxfuse
+INFO  [2019-03-28 03:13:54,446] org.flywaydb.core.internal.database.DatabaseFactory: Database: jdbc:postgresql://postgres-service:5432/compute-1553742598-tq75-das (PostgreSQL 9.6)
+INFO  [2019-03-28 03:13:54,802] org.flywaydb.core.internal.command.DbMigrate: Current version of schema "das": 3
+INFO  [2019-03-28 03:13:54,803] org.flywaydb.core.internal.command.DbMigrate: Schema "das" is up to date. No migration necessary.
++ mkdir -p /var/log/das
++ '[' true = false ']'
++ '[' true = file ']'
++ echo -e 'Running in foreground with logs written to console..'
+Running in foreground with logs written to console..
++ exec /docker-java-home/bin/java -Djdk.tls.disabledAlgorithms=SSLv3,GCM -Xms4096M -Xmx6553M -Xloggc:/var/log/das/das-webapp-gc-%t.log -XX:+UseG1GC -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+PrintGCCause -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=10 -XX:GCLogFileSize=10M -classpath '/usr/das/current/lib/data_analytics_studio-webapp-1.3.0.1.3.0.0-16.jar:/usr/das/current/lib/hs_libs/*:/usr/das/current/conf/hadoop' com.hortonworks.hivestudio.webapp.HiveStudioApplication server /usr/das/current/conf/das-webapp/das-webapp.json
+INFO  [2019-03-28 03:13:56,531] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2019-03-28 03:13:56,534] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2019-03-28 03:13:56,534] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: assets for path /*
+INFO  [2019-03-28 03:13:56,589] com.hortonworks.hivestudio.common.AppAuthentication: Trying to login as user: , using keytab: 
+WARN  [2019-03-28 03:13:56,693] org.apache.hadoop.util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+INFO  [2019-03-28 03:13:56,806] com.hortonworks.hivestudio.common.AppAuthentication: Login succeeded as user: , name: hive
+INFO  [2019-03-28 03:13:56,960] com.hortonworks.hivestudio.webapp.registries.GuiceModuleRegistry: provided configuration directory : /usr/das/current/conf/das-webapp
+INFO  [2019-03-28 03:13:57,420] com.hortonworks.hivestudio.common.util.PropertyUtils: loading configurations from file /usr/das/current/conf/das-webapp/das.conf
+INFO  [2019-03-28 03:13:58,535] com.hortonworks.hivestudio.common.util.PropertyUtils: loading configurations from file /usr/das/current/conf/das-webapp/das-hive-site.conf
+INFO  [2019-03-28 03:13:58,535] com.hortonworks.hivestudio.common.util.PropertyUtils: loading configurations from file /usr/das/current/conf/das-webapp/das-hive-interactive-site.conf
+INFO  [2019-03-28 03:13:58,693] com.hortonworks.hivestudio.hive.services.DDLProxy: Creating DDLProxy
+INFO  [2019-03-28 03:13:59,189] com.hortonworks.hivestudio.hive.services.DDLProxy: Creating DDLProxy
+INFO  [2019-03-28 03:13:59,412] com.hortonworks.hivestudio.hive.services.DDLProxy: Creating DDLProxy
+INFO  [2019-03-28 03:13:59,420] com.hortonworks.hivestudio.hive.services.DDLProxy: Creating DDLProxy
+INFO  [2019-03-28 03:13:59,497] io.dropwizard.server.ServerFactory: Starting Hive Studio
+================================================================================
+:: Hortonworks ::              DAS - WEBAPP                     :: Ver: 1.3.0 ::
+================================================================================
+
+
+INFO  [2019-03-28 03:14:00,903] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    GET     /api/about (com.hortonworks.hivestudio.webapp.resources.AboutResource$$EnhancerByGuice$$3630e1c6)
+    GET     /api/about/configs (com.hortonworks.hivestudio.webapp.resources.AboutResource$$EnhancerByGuice$$3630e1c6)
+    GET     /api/about/context (com.hortonworks.hivestudio.webapp.resources.AboutResource$$EnhancerByGuice$$3630e1c6)
+    POST    /api/conn/reset (com.hortonworks.hivestudio.webapp.resources.ConnectionResource)
+    PUT     /api/conn/set (com.hortonworks.hivestudio.webapp.resources.ConnectionResource)
+    GET     /api/data-bundle/query/{id} (com.hortonworks.hivestudio.webapp.resources.BundleResource)
+    GET     /api/ddl/databases (com.hortonworks.hivestudio.webapp.resources.DDLResource)
+    POST    /api/ddl/databases (com.hortonworks.hivestudio.webapp.resources.DDLResource)
+    DELETE  /api/ddl/databases/{database_id} (com.hortonworks.hivestudio.webapp.resources.DDLResource)
+    GET     /api/ddl/databases/{database_id} (com.hortonworks.hivestudio.webapp.resources.DDLResource)
+    GET     /api/ddl/databases/{database_id}/fetch_all (com.hortonworks.hivestudio.webapp.resources.DDLResource)
+    GET     /api/ddl/databases/{database_id}/tables (com.hortonworks.hivestudio.webapp.resources.DDLResource)
+    POST    /api/ddl/databases/{database_id}/tables (com.hortonworks.hivestudio.webapp.resources.DDLResource)
+    POST    /api/ddl/databases/{database_id}/tables/ddl (com.hortonworks.hivestudio.webapp.resources.DDLResource)
+    DELETE  /api/ddl/databases/{database_id}/tables/{table_id} (com.hortonworks.hivestudio.webapp.resources.DDLResource)
+    GET     /api/ddl/databases/{database_id}/tables/{table_id} (com.hortonworks.hivestudio.webapp.resources.DDLResource)
+    PUT     /api/ddl/databases/{database_id}/tables/{table_id} (com.hortonworks.hivestudio.webapp.resources.DDLResource)
+    PUT     /api/ddl/databases/{database_id}/tables/{table_id}/analyze (com.hortonworks.hivestudio.webapp.resources.DDLResource)
+    GET     /api/ddl/databases/{database_id}/tables/{table_id}/column/{column_id}/fetch_stats (com.hortonworks.hivestudio.webapp.resources.DDLResource)
+    GET     /api/ddl/databases/{database_id}/tables/{table_id}/column/{column_id}/stats (com.hortonworks.hivestudio.webapp.resources.DDLResource)
+    GET     /api/ddl/databases/{database_id}/tables/{table_id}/fetch_stats (com.hortonworks.hivestudio.webapp.resources.DDLResource)
+    GET     /api/ddl/databases/{database_id}/tables/{table_id}/info (com.hortonworks.hivestudio.webapp.resources.DDLResource)
+    GET     /api/ddl/databases/{database_id}/tables/{table_id}/recommendation (com.hortonworks.hivestudio.webapp.resources.DDLResource)
+    PUT     /api/ddl/databases/{database_id}/tables/{table_id}/rename (com.hortonworks.hivestudio.webapp.resources.DDLResource)
+    GET     /api/fileResources (com.hortonworks.hivestudio.webapp.resources.FileResource)
+    POST    /api/fileResources (com.hortonworks.hivestudio.webapp.resources.FileResource)
+    DELETE  /api/fileResources/{id} (com.hortonworks.hivestudio.webapp.resources.FileResource)
+    GET     /api/fileResources/{id} (com.hortonworks.hivestudio.webapp.resources.FileResource)
+    PUT     /api/fileResources/{id} (com.hortonworks.hivestudio.webapp.resources.FileResource)
+    POST    /api/files (com.hortonworks.hivestudio.webapp.resources.FileOperationResource)
+    DELETE  /api/files/{filePath:.*} (com.hortonworks.hivestudio.webapp.resources.FileOperationResource)
+    GET     /api/files/{filePath:.*} (com.hortonworks.hivestudio.webapp.resources.FileOperationResource)
+    PUT     /api/files/{filePath:.*} (com.hortonworks.hivestudio.webapp.resources.FileOperationResource)
+    GET     /api/hive/dag (com.hortonworks.hivestudio.webapp.resources.HiveQueryResource)
+    GET     /api/hive/dag/{id} (com.hortonworks.hivestudio.webapp.resources.HiveQueryResource)
+    GET     /api/hive/query (com.hortonworks.hivestudio.webapp.resources.HiveQueryResource)
+    GET     /api/hive/query/download-all (com.hortonworks.hivestudio.webapp.resources.HiveQueryResource)
+    GET     /api/hive/query/recommendations (com.hortonworks.hivestudio.webapp.resources.HiveQueryResource)
+    GET     /api/hive/query/{id} (com.hortonworks.hivestudio.webapp.resources.HiveQueryResource)
+    GET     /api/hive/vertices (com.hortonworks.hivestudio.webapp.resources.HiveQueryResource)
+    GET     /api/hive/vertices/{id} (com.hortonworks.hivestudio.webapp.resources.HiveQueryResource)
+    POST    /api/jobs (com.hortonworks.hivestudio.webapp.resources.JobResource)
+    DELETE  /api/jobs/{jobId} (com.hortonworks.hivestudio.webapp.resources.JobResource)
+    GET     /api/jobs/{jobId} (com.hortonworks.hivestudio.webapp.resources.JobResource)
+    GET     /api/jobs/{jobId}/logs (com.hortonworks.hivestudio.webapp.resources.JobResource)
+    GET     /api/jobs/{jobId}/query (com.hortonworks.hivestudio.webapp.resources.JobResource)
+    GET     /api/jobs/{jobId}/results (com.hortonworks.hivestudio.webapp.resources.JobResource)
+    GET     /api/jobs/{jobId}/results/csv/saveToHDFS (com.hortonworks.hivestudio.webapp.resources.JobResource)
+    GET     /api/jobs/{jobId}/results/csv/{fileName} (com.hortonworks.hivestudio.webapp.resources.JobResource)
+    GET     /api/jobs/{jobId}/results/keepAlive (com.hortonworks.hivestudio.webapp.resources.JobResource)
+    GET     /api/jobs/{jobId}/status (com.hortonworks.hivestudio.webapp.resources.JobResource)
+    POST    /api/login (com.hortonworks.hivestudio.webapp.resources.LdapLoginResource)
+    POST    /api/ops/chmod (com.hortonworks.hivestudio.webapp.resources.FileSystemResource)
+    POST    /api/ops/copy (com.hortonworks.hivestudio.webapp.resources.FileSystemResource)
+    GET     /api/ops/listdir (com.hortonworks.hivestudio.webapp.resources.FileSystemResource)
+    PUT     /api/ops/mkdir (com.hortonworks.hivestudio.webapp.resources.FileSystemResource)
+    POST    /api/ops/move (com.hortonworks.hivestudio.webapp.resources.FileSystemResource)
+    DELETE  /api/ops/moveToTrash (com.hortonworks.hivestudio.webapp.resources.FileSystemResource)
+    DELETE  /api/ops/remove (com.hortonworks.hivestudio.webapp.resources.FileSystemResource)
+    POST    /api/ops/rename (com.hortonworks.hivestudio.webapp.resources.FileSystemResource)
+    DELETE  /api/ops/trash/emptyTrash (com.hortonworks.hivestudio.webapp.resources.FileSystemResource)
+    GET     /api/query/facets (com.hortonworks.hivestudio.webapp.resources.QuerySearchResource)
+    GET     /api/query/fields-information (com.hortonworks.hivestudio.webapp.resources.QuerySearchResource)
+    POST    /api/query/kill-query (com.hortonworks.hivestudio.webapp.resources.QuerySearchResource)
+    GET     /api/query/search (com.hortonworks.hivestudio.webapp.resources.QuerySearchResource)
+    POST    /api/query/search (com.hortonworks.hivestudio.webapp.resources.QuerySearchResource)
+    POST    /api/replicationDump/bootstrap/databases/{databaseName} (com.hortonworks.hivestudio.webapp.resources.ReplicationDumpResource)
+    POST    /api/replicationDump/full_bootstrap (com.hortonworks.hivestudio.webapp.resources.ReplicationDumpResource)
+    POST    /api/replicationDump/full_incremental (com.hortonworks.hivestudio.webapp.resources.ReplicationDumpResource)
+    POST    /api/replicationDump/incremental/databases/{databaseName} (com.hortonworks.hivestudio.webapp.resources.ReplicationDumpResource)
+    GET     /api/replicationDump/info (com.hortonworks.hivestudio.webapp.resources.ReplicationDumpResource)
+    GET     /api/reports/count/database/{id} (com.hortonworks.hivestudio.webapp.resources.CountReportResource)
+    GET     /api/reports/count/table/{id} (com.hortonworks.hivestudio.webapp.resources.CountReportResource)
+    GET     /api/reports/join/database/{id} (com.hortonworks.hivestudio.webapp.resources.JoinReportResource)
+    GET     /api/reports/read/database/{id}/table/{tableId} (com.hortonworks.hivestudio.webapp.resources.ReadReportResource)
+    GET     /api/savedQueries (com.hortonworks.hivestudio.webapp.resources.SavedQueryResource)
+    POST    /api/savedQueries (com.hortonworks.hivestudio.webapp.resources.SavedQueryResource)
+    DELETE  /api/savedQueries/{id} (com.hortonworks.hivestudio.webapp.resources.SavedQueryResource)
+    GET     /api/savedQueries/{id} (com.hortonworks.hivestudio.webapp.resources.SavedQueryResource)
+    PUT     /api/savedQueries/{id} (com.hortonworks.hivestudio.webapp.resources.SavedQueryResource)
+    GET     /api/settings (com.hortonworks.hivestudio.webapp.resources.SettingsResource)
+    POST    /api/settings (com.hortonworks.hivestudio.webapp.resources.SettingsResource)
+    DELETE  /api/settings/{id} (com.hortonworks.hivestudio.webapp.resources.SettingsResource)
+    PUT     /api/settings/{id} (com.hortonworks.hivestudio.webapp.resources.SettingsResource)
+    GET     /api/status (com.hortonworks.hivestudio.common.resource.HealthCheckResource)
+    GET     /api/suggested-searches (com.hortonworks.hivestudio.webapp.resources.SuggestedSearchesResource)
+    POST    /api/suggested-searches (com.hortonworks.hivestudio.webapp.resources.SuggestedSearchesResource)
+    DELETE  /api/suggested-searches/{searchId} (com.hortonworks.hivestudio.webapp.resources.SuggestedSearchesResource)
+    GET     /api/token (com.hortonworks.hivestudio.webapp.resources.CsrfTokenResource)
+    GET     /api/udfs (com.hortonworks.hivestudio.webapp.resources.UdfResource)
+    POST    /api/udfs (com.hortonworks.hivestudio.webapp.resources.UdfResource)
+    DELETE  /api/udfs/{id} (com.hortonworks.hivestudio.webapp.resources.UdfResource)
+    GET     /api/udfs/{id} (com.hortonworks.hivestudio.webapp.resources.UdfResource)
+    PUT     /api/udfs/{id} (com.hortonworks.hivestudio.webapp.resources.UdfResource)
+    POST    /api/upload/insertIntoTable (com.hortonworks.hivestudio.webapp.resources.UploadResource)
+    PUT     /api/upload/preview (com.hortonworks.hivestudio.webapp.resources.UploadResource)
+    POST    /api/upload/previewFromHdfs (com.hortonworks.hivestudio.webapp.resources.UploadResource)
+    PUT     /api/upload/upload (com.hortonworks.hivestudio.webapp.resources.UploadResource)
+    POST    /api/upload/uploadFromHDFS (com.hortonworks.hivestudio.webapp.resources.UploadResource)
+    GET     /api/user/home (com.hortonworks.hivestudio.webapp.resources.UserResource)
+    GET     /api/user/trash/enabled (com.hortonworks.hivestudio.webapp.resources.UserResource)
+    GET     /api/user/trashDir (com.hortonworks.hivestudio.webapp.resources.UserResource)
+
+INFO  [2019-03-28 03:14:00,908] io.dropwizard.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+

@@ -1,0 +1,3 @@
+<14>1 2019-03-28T19:47:01.580Z hiveserver2-687548cbf-n4s88 hiveserver2 1 62f5fc49-5191-11e9-83d0-02c17ec35ac0 [mdc@18060 class="SessionState" level="INFO" operationLogLevel="EXECUTION" queryId="hive_20190328194547_a15041fc-a543-4758-9d09-87e1f35aed43" sessionId="90196f83-4eb0-403a-ab2a-fff5fa44d0b6" thread="HiveServer2-Background-Pool: Thread-140"]
+Query Execution Summary
+<14>1 2019-03-28T19:47:01.581Z hiveserver2-687548cbf-n4s88 hiveserver2 1 62f5fc49-5191-11e9-83d0-02c17ec35ac0 [mdc@18060 class="SessionState" level="INFO" operationLogLevel="EXECUTION" queryId="hive_20190328194547_a15041fc-a543-4758-9d09-87e1f35aed43" sessionId="90196f83-4eb0-403a-ab2a-fff5fa44d0b6" thread="HiveServer2-Background-Pool: Thread-140"] Query Execution Summary

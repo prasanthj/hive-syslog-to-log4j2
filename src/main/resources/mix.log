@@ -1,0 +1,4 @@
+<11>1 2019-03-18T23:23:59.964Z query-executor-0.query-executor-service.compute-1552951413-2pwc.svc.cluster.local query-executor 1 e0c78c25-49d4-11e9-83d0-02c17ec35ac0 [mdc@18060 class="impl.LlapDaemon" level="ERROR" thread="main"] Cannot find CONTAINER_ID; LLAP tokens may grant access to subsequent instances of the cluster with the same name
+2019-03-18 23:23:59,969 main DEBUG AsyncLogger.ThreadNameStrategy=UNCACHED (user specified null, default is UNCACHED)
+2019-03-18 23:23:59,969 main TRACE Using default SystemClock for timestamps.
+<12>1 2019-03-18T23:23:59.974Z query-executor-0.query-executor-service.compute-1552951413-2pwc.svc.cluster.local query-executor 1 e0c78c25-49d4-11e9-83d0-02c17ec35ac0 [mdc@18060 class="impl.LlapDaemon" level="WARN" thread="main"] NodeManager host/port not found in environment. Values retrieved: host=null, port=null

@@ -1,0 +1,6 @@
+#!/bin/bash -e
+
+SYS2LOG4J_HOME="$PWD"
+SYS2LOG4J_CLASSPATH="$SYS2LOG4J_HOME/target/*:$SYS2LOG4J_HOME/target/lib/*:$SYS2LOG4J_HOME/target/classes"
+
+java -cp $SYS2LOG4J_CLASSPATH Sys2Log4j
