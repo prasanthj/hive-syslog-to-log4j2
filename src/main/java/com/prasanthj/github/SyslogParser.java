@@ -8,7 +8,6 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
-import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -19,6 +18,7 @@ import java.util.Map;
 import java.util.TimeZone;
 
 import org.apache.commons.lang3.StringEscapeUtils;
+import org.apache.hadoop.hive.common.type.Timestamp;
 
 /**
  * A Syslog protocol parser.
@@ -304,7 +304,7 @@ public class SyslogParser implements Closeable {
     row.add(FACILITIES[priority / 8]);
     row.add(getEventPriorityBySyslog(priority));
     row.add(version == 0 ? "RFC3164" : "RFC5424");
-    row.add(new Timestamp(cal.getTimeInMillis()));
+    row.add(Timestamp.ofEpochMilli(cal.getTimeInMillis()));
     row.add(hostname);
     row.add(new String(appname));
     row.add(new String(procId));
