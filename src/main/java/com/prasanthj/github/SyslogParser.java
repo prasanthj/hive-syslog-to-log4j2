@@ -18,6 +18,8 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.TimeZone;
 
+import org.apache.commons.lang3.StringEscapeUtils;
+
 /**
  * A Syslog protocol parser.
  * It should be capable of parsing RFC 3164 (BSD syslog) streams as well as
@@ -712,7 +714,7 @@ public class SyslogParser implements Closeable {
 
         String sdValue = new String(ret.toByteArray());
         ret.reset();
-        structuredData.put(sdKey, sdValue);
+        structuredData.put(sdKey, StringEscapeUtils.unescapeHtml4(sdValue));
 
         c = read(true);
       }

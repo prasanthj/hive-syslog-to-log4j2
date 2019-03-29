@@ -31,11 +31,10 @@ public class Sys2Log4j {
                 System.out.print(SIMPLE_DATE_FORMAT.format(row.get(3)) + " ");
                 Map<String, String> data = (Map<String, String>) row.get(8);
                 System.out.print(String.format(LOG_LEVEL_FORMAT, data.get("level")));
-                System.out.print(
-                  " [" + StringEscapeUtils.unescapeHtml4(data.get("thread")) + "] " + data.get("class") + ": ");
-                System.out.println(row.get(9));
+                System.out.print(" [" + data.get("thread") + "] " + data.get("class") + ": ");
+                System.out.println(new String((byte[]) row.get(9)));
               } else {
-                System.out.println(row.get(10));
+                System.out.println(new String((byte[]) row.get(10)));
               }
             }
           } else {
