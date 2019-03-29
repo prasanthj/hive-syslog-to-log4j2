@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -45,8 +46,8 @@ public class SyslogParser implements Closeable {
   // proc_id STRING
   // msg_id STRING
   // structured_data map<STRING,STRING>
-  // msg STRING
-  // unmatched STRING
+  // msg BINARY
+  // unmatched BINARY
   final static int EXPECTED_COLUMNS = 11;
 
   private final static String[] FACILITIES = new String[]{"KERN", "USER", "MAIL", "DAEMON", "AUTH", "SYSLOG", "LPR", "NEWS",
@@ -58,6 +59,7 @@ public class SyslogParser implements Closeable {
 
   private InputStream in;
   private boolean parseTag;
+  private static final Charset UTF8 = StandardCharsets.UTF_8;
   private Charset charset;
 
   /// Push back buffer. -1 indicates that it is empty.
@@ -73,7 +75,7 @@ public class SyslogParser implements Closeable {
    * Tags are parsed, and the encoding is assumed to be UTF-8.
    */
   public SyslogParser(InputStream in) {
-    this(in, true, "UTF-8");
+    this(in, true, UTF8);
   }
 
   /**
@@ -86,10 +88,10 @@ public class SyslogParser implements Closeable {
    * @param encoding the encoding to use for various string conversions,
    *                 most notably the hostname.
    */
-  public SyslogParser(InputStream in, boolean parseTag, String encoding) {
+  public SyslogParser(InputStream in, boolean parseTag, Charset encoding) {
     this.in = in;
     this.parseTag = parseTag;
-    this.charset = Charset.forName(encoding);
+    this.charset = encoding;
   }
 
   /**
@@ -278,12 +280,12 @@ public class SyslogParser implements Closeable {
     for (int i = 0; i < SyslogParser.EXPECTED_COLUMNS; i++) {
       row.add(null);
     }
-    row.set(10, (char) c + new String(msg));
+    row.set(10, ((char) c + new String(msg)).getBytes(charset));
     return row;
   }
 
   /**
-   * Create a Flume event from the given parameters.
+   * Create a log event from the given parameters.
    *
    * @param version        the syslog version, 0 for RFC 3164
    * @param priority       the syslog priority, according to RFC 5424
@@ -306,7 +308,7 @@ public class SyslogParser implements Closeable {
     row.add(new String(procId));
     row.add(new String(msgId));
     row.add(structuredData);
-    row.add(body == null ? "" : new String(body));
+    row.add(body);
   }
 
   /**
@@ -553,13 +555,9 @@ public class SyslogParser implements Closeable {
    * Usually the output stream will be a ByteArrayOutputStream.
    */
   private void readWord(OutputStream out) throws IOException {
-    readWord(out, ' ');
-  }
-
-  private void readWord(OutputStream out, char until) throws IOException {
     int c;
 
-    while ((c = read(false)) != until && c != -1) {
+    while ((c = read(false)) != ' ' && c != -1) {
       out.write(c);
     }
 
@@ -588,12 +586,8 @@ public class SyslogParser implements Closeable {
    * @return a valid, but perhaps empty, word.
    */
   private byte[] readWord(int sizeHint) throws IOException {
-    return readWord(sizeHint, ' ');
-  }
-
-  private byte[] readWord(int sizeHint, char until) throws IOException {
     ByteArrayOutputStream out = new ByteArrayOutputStream(sizeHint);
-    readWord(out, until);
+    readWord(out);
 
     return out.toByteArray();
   }
@@ -605,11 +599,7 @@ public class SyslogParser implements Closeable {
    * @param sizeHint an guess on how large string will be, in bytes.
    */
   private byte[] readWordOrNil(int sizeHint) throws IOException {
-    return readWordOrNil(sizeHint, ' ');
-  }
-
-  private byte[] readWordOrNil(int sizeHint, char until) throws IOException {
-    byte[] ret = readWord(sizeHint, until);
+    byte[] ret = readWord(sizeHint);
 
     if (ret.length == 1 && ret[0] == '-') {
       return null;
