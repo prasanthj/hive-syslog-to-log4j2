@@ -1,6 +1,7 @@
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
@@ -18,6 +19,11 @@ public class Sys2Log4j {
 
   public static void main(String[] args) {
     SyslogParser syslogParser = new SyslogParser();
+    long unmatched = 0;
+    long matched = 0;
+    long nulls = 0;
+    boolean unmatchedOnly = args.length == 1 && args[0].equals("-u");
+    boolean matchedOnly = args.length == 1 && args[0].equals("-m");
     try (Scanner scanner = new Scanner(System.in)) {
       while (scanner.hasNextLine()) {
         String line = scanner.nextLine();
@@ -26,19 +32,38 @@ public class Sys2Log4j {
             ByteArrayInputStream bis = new ByteArrayInputStream(line.getBytes());
             syslogParser.setInputStream(bis);
             List<Object> row = syslogParser.readEvent();
+            String matchedOut = "";
+            String unmatchedOut = "";
             if (row != null) {
               if (row.get(3) != null) {
                 java.sql.Timestamp sqlTs = ((org.apache.hadoop.hive.common.type.Timestamp)row.get(3)).toSqlTimestamp();
-                System.out.print(SIMPLE_DATE_FORMAT.format(sqlTs) + " ");
+                matchedOut += SIMPLE_DATE_FORMAT.format(sqlTs) + " ";
                 Map<String, String> data = (Map<String, String>) row.get(8);
-                System.out.print(String.format(LOG_LEVEL_FORMAT, data.get("level")));
-                System.out.print(" [" + data.get("thread") + "] " + data.get("class") + ": ");
-                System.out.println(new String((byte[]) row.get(9)));
+                matchedOut += String.format(LOG_LEVEL_FORMAT, data.get("level"));
+                matchedOut += " [" + data.get("thread") + "] " + data.get("class") + ": ";
+                if (row.get(9) != null) {
+                  matchedOut += new String((byte[]) row.get(9));
+                }
+                matched++;
               } else {
-                System.out.println(new String((byte[]) row.get(10)));
+                unmatched++;
+                unmatchedOut += new String((byte[]) row.get(10));
+              }
+            }
+            if (matchedOnly) {
+              System.out.println(matchedOut);
+            } else if (unmatchedOnly) {
+              System.out.println(unmatchedOut);
+            } else {
+              if (!matchedOut.isEmpty()) {
+                System.out.println(matchedOut);
+              }
+              if (!unmatchedOut.isEmpty()) {
+                System.out.println(unmatchedOut);
               }
             }
           } else {
+            nulls++;
             System.out.println();
           }
         } catch (Exception e) {
@@ -47,6 +72,13 @@ public class Sys2Log4j {
           System.exit(-1);
         }
       }
+    }
+    if (matchedOnly) {
+      System.out.println("matched: " + matched + " nulls: " + nulls);
+    } else if (unmatchedOnly) {
+      System.out.println("unmatched: " + unmatched + " nulls: " + nulls);
+    } else {
+      System.out.println("matched: " + matched + " unmatched: " + unmatched + " nulls: " + nulls);
     }
   }
 }
